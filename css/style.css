@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Open+Sans:wght@300;400&display=swap');
+:root{
+    --primary-color: blue;
+    --orange-clr: #fb0000;
+    --chocolate-clr:#150303;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3{
+    font-family: 'Chivo',sans-serif;
+}
+
+/* ====================================================================Navigation bar=========================================*/
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    background-color: var(--chocolate-clr);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    /* border-bottom: 2px solid rgba(255, 255, 255,0.2); */
+}
+.navbar > .logo{
+    margin-right: auto;
+}
+.logo{
+    font-size: 8px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 64px;
+    padding-top: 5px;
+    filter: invert(14%) sepia(63%) saturate(7427%) hue-rotate(357deg) brightness(90%) contrast(122%);
+}
+.logo h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 16px 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.navbar ul li a:hover{
+    color: var(--orange-clr);
+}
+.btn{
+    color: #fff;
+    background-color: var(--orange-clr);
+    align-self: stretch;
+    padding: 28px 70px 0;
+    font-weight: 600;
+}
+
+/* ===========================================================================Main section=============================================== */
+.main-section{
+    background-color: var(--chocolate-clr);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+.left-main-section{
+    flex: 1;
+    align-self: center;
+    /* background-color: red;s */
+}
+.left-main-section-box{
+    position: relative;
+    top: 20%;
+    left: 23%;
+}
+.left-main-section-box h1{
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 52px;
+}
+.left-main-section-box p{
+    font-size: 1.5rem;
+}
+.btn-book-now {
+    margin-top: 35px;
+    padding: 18px 45px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    background-color: var(--orange-clr);
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: all .2s linear;
+    overflow: hidden;
+}
+.btn-book-now:hover{
+    color: var(--orange-clr);
+    font-weight: 700;
+}
+.btn-book-now::before{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(-101%);
+    transition: all .3s linear;
+}
+.btn-book-now:hover::before{
+    transform: translate(0%);
+    color: var(--orange-clr);
+}
+.right-main-section{
+    flex: 1.4;
+    text-align: right;
+}
+.right-main-section img{
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* ==================================================================  A B O U T   S E C T I O N ================================================= */
+
+.about-section{
+    display: flex;
+    height: 84vh;
+    width: 90%;
+    max-width: 1600px;
+    margin: 6rem auto;
+    color: #675E5E;
+    justify-content: center;
+    align-items: center;
+}
+.left-about-section{
+    width: 33.33%;
+    font-size: 1.3rem;
+    max-height: 65vh;
+}
+.leftsec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left-about-section-points{
+    display: flex;
+    margin-bottom: 1.2rem;
+}
+.left-about-section-points img{
+    align-self: flex-start;
+}
+.left-about-section-points p{
+    margin:0 30px 0px 25px ;
+}
+.mid-about-section{
+    width: 33.33%;
+}
+.mid-about-section img{
+    width: 100%;
+}
+.right-about-section{
+    width: 33.33%;
+    padding: 1rem 25px;
+    position: relative;
+}
+.right-about-section h1{
+    margin: 70px 0 20px;
+    /* padding-top: 50px; */
+    font-size: 2.6rem;
+    color: black;
+}
+.right-about-section h1::before{
+    content: '';
+    position: absolute;
+    border-top: 6px solid var(--orange-clr);
+    width: 4rem;
+    top:  2.5rem;
+}
+.right-about-section p{
+    margin-bottom: 2.5rem;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+.btn-book-now-2 {
+    /* margin-top: 35px; */
+    padding: 12px 38px;
+    border: 2px solid var(--orange-clr);
+    background-color: transparent;
+    color: var(--orange-clr);
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: all .3s linear;
+    /* overflow: hidden; */
+}
+.btn-book-now-2:hover{
+    color: #fff;
+}
+.btn-book-now-2::before{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    /* color: var(--orange-clr); */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s linear;
+}
+.btn-book-now-2:hover::before{
+    background-color: var(--orange-clr);
+}
+
+
+/* ==========================================   P R I C E  S E C T I O N   =================================== */
+
+.price-section{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.price-section-gallery-collage{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.price-section-gallery-collage img{
+    width: 33.33%;
+    flex-wrap: wrap;
+}
+.price-section-menu{
+ width: 40%;
+}
+.price-section-menu-box{
+    margin: 2rem;
+}
+.price-section-menu-box h1{
+    font-size: 2.5rem;
+    border-bottom: 1.5px solid black;
+    padding: 0 0 0.6rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.price-section-menu-box h1::before{
+    content: '';
+    position: absolute;
+    border-top: 6px solid var(--orange-clr);
+    width: 4rem;
+    top: -2rem;
+}
+.price-rows{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(175, 173, 173, 0.7);
+    width: 100%;
+}
+.price-rows h3{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.price-rows p{
+    font-size: 1.2rem;
+}
+.price-rows p span{
+    color: var(--orange-clr);
+    font-weight: 700;
+}
